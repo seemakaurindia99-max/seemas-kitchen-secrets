@@ -32,6 +32,14 @@ export default {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
 				},
+				warm: {
+					DEFAULT: 'hsl(var(--warm))',
+					foreground: 'hsl(var(--warm-foreground))'
+				},
+				spice: {
+					DEFAULT: 'hsl(var(--spice))',
+					foreground: 'hsl(var(--spice-foreground))'
+				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
