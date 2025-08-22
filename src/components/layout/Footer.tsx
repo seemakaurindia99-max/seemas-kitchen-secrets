@@ -30,10 +30,12 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold text-foreground mb-4">Legal</h3>
+            <h3 className="font-semibold text-foreground mb-4">Categories</h3>
             <ul className="space-y-2">
-              <li><Link to="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link></li>
-              <li><Link to="/terms-conditions" className="text-muted-foreground hover:text-primary transition-colors">Terms & Conditions</Link></li>
+              <li><span className="text-muted-foreground">🍛 Indian Vegetarian</span></li>
+              <li><span className="text-muted-foreground">🍗 Non-Vegetarian</span></li>
+              <li><span className="text-muted-foreground">🥗 Healthy & Vegan</span></li>
+              <li><span className="text-muted-foreground">🍰 Desserts</span></li>
             </ul>
           </div>
         </div>
