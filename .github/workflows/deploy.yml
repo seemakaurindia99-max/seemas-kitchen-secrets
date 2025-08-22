@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]   # 👈 change if your repo uses 'master' instead of 'main'
+    branches: [ main ]   # 👈 your source branch
 
 jobs:
   build:
@@ -27,4 +27,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist   # 👈 Vite build output folder
+          publish_dir: ./dist   # Vite build output
+          publish_branch: gh-pages   # 👈 add this line
