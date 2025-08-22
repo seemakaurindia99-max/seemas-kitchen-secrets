@@ -2,7 +2,10 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]   # or master if your default branch is master
+    branches: [ main ]   # change to master if that's your branch
+
+permissions:
+  contents: write    # 👈 this line is critical
 
 jobs:
   build:
@@ -18,7 +21,7 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci   # faster and safer than npm install
 
       - name: Build project
         run: npm run build
@@ -28,4 +31,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          publish_branch: gh-pages   # 👈 important
+          publish_branch: gh-pages
