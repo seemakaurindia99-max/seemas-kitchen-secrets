@@ -8,7 +8,9 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: "/seemas-kitchen-secrets/",           // <-- important!
+  base: mode === "production"
+    ? "/seemas-kitchen-secrets/" // GitHub Pages
+    : "/",                       // Local or custom domain
   plugins: [
     react(),
     mode === "development" && componentTagger(),
