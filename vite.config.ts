@@ -8,9 +8,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: mode === "production"
-    ? "/seemas-kitchen-secrets/" // GitHub Pages
-    : "/",                       // Local or custom domain
+  base: "/",   // 👈 Always root, works for seema.fit
   plugins: [
     react(),
     mode === "development" && componentTagger(),
